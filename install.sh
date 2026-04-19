@@ -2,7 +2,7 @@
 set -e
 
 APP_NAME="xvisual"
-REPO="Rajatsaxenabhu/Rajatsaxenabhu"
+REPO="Rajatsaxenabhu/Xvisual"
 INSTALL_DIR="/usr/local/bin"
 DESKTOP_DIR="/usr/share/applications"
 ICON_DIR="/usr/share/icons/hicolor/256x256/apps"
