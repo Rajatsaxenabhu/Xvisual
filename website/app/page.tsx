@@ -79,10 +79,10 @@ export default function Home() {
         </p>
 
         {/* Install command */}
-        <div className="flex items-center gap-3 bg-white/75 backdrop-blur-sm border border-white/80 rounded-2xl px-5 py-4 text-left text-base text-violet-700 overflow-x-auto max-w-3xl mx-auto shadow-lg shadow-violet-100/60"
+        <div className="flex items-center gap-3 bg-white/75 backdrop-blur-sm border border-white/80 rounded-2xl px-5 py-4 text-left text-base text-violet-700 max-w-3xl mx-auto shadow-lg shadow-violet-100/60"
           style={{ fontFamily: "var(--font-geist-mono), monospace" }}
         >
-          <span className="select-all flex-1 whitespace-nowrap font-medium">{INSTALL_CMD}</span>
+          <span className="flex-1 truncate font-medium">{INSTALL_CMD}</span>
           <Button
             size="sm"
             variant="outline"
