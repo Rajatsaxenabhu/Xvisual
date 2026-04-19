@@ -26,3 +26,16 @@ Cargo.lock
 # Logs
 *.log
 
+# Next.js (xvisual-website)
+xvisual-website/.next/
+xvisual-website/out/
+xvisual-website/node_modules/
+xvisual-website/.env
+xvisual-website/.env.local
+xvisual-website/.env.*.local
+xvisual-website/npm-debug.log*
+xvisual-website/yarn-debug.log*
+xvisual-website/yarn-error.log*
+xvisual-website/.vercel
+xvisual-website/next-env.d.ts
+
