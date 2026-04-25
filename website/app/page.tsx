@@ -25,6 +25,21 @@ const modes = [
     name: "EQ Bars",
     desc: "Symmetric frequency bars mirrored up and down",
   },
+  {
+    key: "4",
+    name: "Space Starfield",
+    desc: "Stars burst outward from the center on every beat",
+  },
+  {
+    key: "5",
+    name: "Plasma Wave",
+    desc: "Layered sine-wave plasma with hue-cycling waveforms",
+  },
+  {
+    key: "6",
+    name: "Hallucination",
+    desc: "Neural network in deep space — neurons fire and propagate signals through synaptic connections, mapped to frequency bands",
+  },
 ];
 
 const deps = [
@@ -75,7 +90,7 @@ export default function Home() {
         </h1>
         <p className="text-zinc-600 text-xl font-medium leading-relaxed mb-10 max-w-2xl mx-auto">
           A real-time terminal audio visualizer for Linux. Captures system audio
-          via PipeWire and renders it live in the terminal.
+          via PipeWire and renders it live in the terminal across 6 visual modes.
         </p>
 
         {/* Install command */}

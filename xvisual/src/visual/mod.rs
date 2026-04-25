@@ -1,6 +1,9 @@
 pub mod classic;
 pub mod bars;
 pub mod car;
+pub mod space;
+pub mod plasma;
+pub mod hallucination;
 
 use crossterm::{
     cursor,
@@ -34,6 +37,9 @@ pub fn visual(cons: AudioConsumer) {
         1 => classic::run(cons, running),
         2 => car::run(cons, running),
         3 => bars::run(cons, running),
+        4 => space::run(cons, running),
+        5 => plasma::run(cons, running),
+        6 => hallucination::run(cons, running),
         _ => {}
     }
 }
@@ -63,6 +69,9 @@ fn draw_menu(stdout: &mut std::io::Stdout, running: &Arc<AtomicBool>) -> u8 {
         ("1", "Classic Orb"),
         ("2", "Car Dashboard"),
         ("3", "Colored EQ Bars"),
+        ("4", "Space Starfield"),
+        ("5", "Plasma Wave"),
+        ("6", "Hallucination"),
     ];
 
     let inner_w: usize = 28;
@@ -116,7 +125,7 @@ fn draw_menu(stdout: &mut std::io::Stdout, running: &Arc<AtomicBool>) -> u8 {
 
     stdout.queue(cursor::MoveTo(bx + 2, last + 1)).unwrap()
           .queue(SetForegroundColor(Color::Rgb { r: 55, g: 55, b: 65 })).unwrap()
-          .queue(Print("1-3 select  ·  ctrl+c quit")).unwrap();
+          .queue(Print("1-6 select  ·  ctrl+c quit")).unwrap();
 
     stdout.queue(ResetColor).unwrap();
     stdout.flush().unwrap();
@@ -129,6 +138,9 @@ fn draw_menu(stdout: &mut std::io::Stdout, running: &Arc<AtomicBool>) -> u8 {
                     KeyCode::Char('1') => return 1,
                     KeyCode::Char('2') => return 2,
                     KeyCode::Char('3') => return 3,
+                    KeyCode::Char('4') => return 4,
+                    KeyCode::Char('5') => return 5,
+                    KeyCode::Char('6') => return 6,
                     _ => {}
                 }
             }
